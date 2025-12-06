@@ -6,6 +6,10 @@
     text-transform: capitalize;
     font-family: "Poppins", sans-serif;
 }
+body{
+    margin: 0;
+    padding: 0;
+}
 .navbar{
     margin: auto;
     padding: 10px;
@@ -32,7 +36,7 @@
     font-size: 18px;
     padding: 10px;
     cursor: pointer;
-
+    animation: btnmov 1s ease-in-out;
 }
 .home {
     margin: auto;
@@ -53,10 +57,12 @@
     text-align: left;
     margin-top: 10%;
     margin-bottom: 10px;
+    animation: moveleft 1s ease-in-out;
     
 }
 .content p{
      text-align: left;
+     animation: moveleft 1s ease-in-out;
 }
 .content .btn1{
     display: flex;
@@ -68,6 +74,7 @@
     cursor: pointer;
     margin: 0;
     text-align: left;
+    animation: btnmov 1s ease-in-out;
 }
 .about{
     height: 50vh;
@@ -122,5 +129,25 @@
     font-size: 18px;
     padding: 10px;
     cursor: pointer;
-
+    animation: btnmov 1s ease-in-out;
+}
+@keyframes moveleft{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes btnmov {
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+       transform: scale(1);
+    }
 }
